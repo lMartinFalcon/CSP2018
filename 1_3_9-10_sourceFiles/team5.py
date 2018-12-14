@@ -12,20 +12,21 @@ strategy_description = '10 minutes later...'
     
 def move(my_history, their_history, my_score, their_score):
     bs, cs = 0
-    ''' Arguments accepted: my_history, their_history are strings.
-    my_score, their_score are ints.
-    
-    Make my move.
-    Returns 'c' or 'b'. 
-    '''
+
+
     if len(their_history) >= 1: # Make sure they have a history
         for i in their_history: # Root throught their history
             if i == 'b':
                 bs = bs + 1;
             else:
                 cs = cs + 1;
+
+        tot = bs+cs;        # Total out betrays and colludes
+        if cs/tot > bs/tot: # Figure out if they betray more, or collude more
+
         tot = bs+cs;
         if cs/tot > bs/tot:
+
             return 'c';
         else:
             return 'b';
@@ -35,6 +36,7 @@ def move(my_history, their_history, my_score, their_score):
             return 'b';
         else:
             return 'c';
+
      
     # my_history: a string with one letter (c or b) per round that has been played with this opponent.
     # their_history: a string of the same length as history, possibly empty. 
@@ -43,6 +45,8 @@ def move(my_history, their_history, my_score, their_score):
     
     # Analyze my_history and their_history and/or my_score and their_score.
     # Decide whether to return 'c' or 'b'.
+
+    
     
 def test_move(my_history, their_history, my_score, their_score, result):
     '''calls move(my_history, their_history, my_score, their_score)
