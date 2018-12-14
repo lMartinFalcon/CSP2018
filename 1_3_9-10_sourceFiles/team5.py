@@ -12,21 +12,15 @@ strategy_description = '10 minutes later...'
     
 def move(my_history, their_history, my_score, their_score):
     bs, cs = 0
-
-
     if len(their_history) >= 1: # Make sure they have a history
         for i in their_history: # Root throught their history
             if i == 'b':
                 bs = bs + 1;
             else:
                 cs = cs + 1;
-
+        
         tot = bs+cs;        # Total out betrays and colludes
         if cs/tot > bs/tot: # Figure out if they betray more, or collude more
-
-        tot = bs+cs;
-        if cs/tot > bs/tot:
-
             return 'c';
         else:
             return 'b';
