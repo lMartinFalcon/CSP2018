@@ -2,13 +2,9 @@ Name your favorite movie:
 Martin = "Tommy Boy"
 Danny - Rocky IV
 <<<<<<< HEAD
-Kenny = The Martian
-=======
-<<<<<<< HEAD
-Avery - Guardians of the Galaxy
+Khanh - Lord of the Rings The Two Towers
+Michael - Guardians of the Galaxy
 =======
 Paul - Pirates of the Caribbean: The Curse of the Black Pearl
 >>>>>>> origin/master
->>>>>>> origin/master
-Testing from Nicks
-Nicks
+
